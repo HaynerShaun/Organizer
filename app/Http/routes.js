@@ -17,4 +17,25 @@
 
 const Route = use('Route')
 
-Route.on('/').render('welcome')
+Route.get('/', 'AuthController.index')
+Route.get('login', 'AuthController.index')
+Route.get('logout', 'AuthController.logout')
+Route.get('register', 'AuthController.register')
+Route.get('home', 'AuthController.home')
+
+Route.get('profile', 'UserController.profile')
+
+Route.get('calendar', 'CalendarController.index')
+
+Route.get('finance', 'FinanceController.index')
+
+Route.get('lists', 'ListController.index')
+
+Route.get('meal', 'MealController.index')
+
+Route.get('shopping', 'ShoppingController.index')
+
+
+
+Route.post('login', 'AuthController.login')
+Route.post('register', 'AuthController.create')
